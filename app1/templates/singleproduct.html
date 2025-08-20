@@ -1,0 +1,244 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Untree.co">
+    <link rel="shortcut icon" href="{% static 'favicon.png' %}">
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="bootstrap, bootstrap4" />
+
+    <!-- Bootstrap CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="{% static 'css/tiny-slider.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    
+    <!-- Override Yellow Underline -->
+    <style>
+      .navbar .nav-item.active .nav-link {
+        text-decoration: none !important;
+        border-bottom: none !important;
+        color: #fff !important;
+      }
+      .navbar .nav-link:hover {
+        text-decoration: none !important;
+        border-bottom: none !important;
+      }
+    </style>
+
+    <title>Single Product - Kick's Brand</title>
+  </head>
+
+  <body>
+    <!-- Navbar (Unchanged) -->
+    <nav class="custom-navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">KICK'S BRAND<span>.</span></a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsFurni">
+          <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+            <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
+            <li><a class="nav-link" href="{% url 'shop' %}">Shop</a></li>
+			<li><a class="nav-link" href="{% url 'about' %}">About us</a></li>
+            <li><a class="nav-link" href="{% url 'services' %}">Services</a></li>
+            <li class="nav-item "><a class="nav-link" href="{% url 'contactus' %}">Contact us</a></li>
+          </ul>
+
+          <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+            <li><a class="nav-link" href="#"><img src="{% static 'images/user.svg' %}" alt="User"></a></li>
+            <li><a class="nav-link" href="{% url 'cart' %}"><img src="{% static 'images/cart.svg' %}" alt="Cart"></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero py-5">
+      <div class="container">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-lg-5">
+            <div class="intro-excerpt">
+              <h1>Single Product</h1>
+              <p class="mb-4">We’re here to help! Whether you have questions about your order, need sizing advice, or want to know more about our products, our support team is just a message away. Contact us anytime — we’re committed to providing quick, friendly, and reliable assistance.</p>
+              <p>
+                <a href="{% url 'shop' %}" class="btn btn-secondary me-2">Shop Now</a>
+                <a href="{% url 'about' %}" class="btn btn-white-outline">Explore</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="hero-img-wrap">
+              <!-- <img src="https://redtape.com/cdn/shop/files/RSO3634_1.jpg?v=1754301935" class="img-fluid" alt="Sneaker" style="height: 500px;"> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Single Product Details Section -->
+    <div class="container py-5">
+      <div class="row align-items-start">
+        <!-- Product Image -->
+        <div class="col-md-6 text-center mb-4 mb-md-0">
+          <img src="https://redtape.com/cdn/shop/files/RSO3634_1.jpg?v=1754301935" class="img-fluid rounded shadow" alt="Product Image" style="max-height: 500px;">
+        </div>
+
+        <!-- Product Info -->
+        <div class="col-md-6">
+          <h2 class="mb-3">RedTape Classic Sneaker</h2>
+          <p class="text-muted mb-4">Step up your game with bold style and lasting comfort. These sneakers are built for all-day wear, with a breathable upper and cushioned sole.</p>
+          
+          <h4 class="text-primary">$89.99 <small class="text-muted text-decoration-line-through">$119.99</small></h4>
+
+          <!-- Size Dropdown -->
+          <div class="mb-3">
+            <label for="size" class="form-label fw-bold">Size</label>
+            <select id="size" class="form-select w-50">
+              <option selected disabled>Choose Size</option>
+              <option>US 7</option>
+              <option>US 8</option>
+              <option>US 9</option>
+              <option>US 10</option>
+            </select>
+          </div>
+
+          <!-- Buttons -->
+          <div class="d-flex gap-3 my-4">
+            <a href="#" class="btn btn-secondary">Add to Cart</a>
+            <a href="#" class="btn btn-outline-dark">Buy Now</a>
+          </div>
+
+          <!-- Features -->
+          <!-- <ul class="list-unstyled text-muted">
+            <li>🚚 Fast & Free Shipping</li>
+            <li>🔁 Hassle-Free Returns</li>
+            <li>🕒 24/7 Customer Support</li>
+          </ul> -->
+        </div>
+      </div>
+    </div>
+
+
+
+    <footer class="footer-section">
+			<div class="container relative">
+
+				<div class="sofa-img">
+					<img src="https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1743526031/831661_AAEX3_1341_001_100_0000_Light.jpg" alt="Image" class="img-fluid">
+				</div>
+
+				<div class="row">
+					<div class="col-lg-8">
+						<div class="subscription-form">
+							<h3 class="d-flex align-items-center"><span class="me-1"><img src="{% static 'images/envelope-outline.svg' %}" alt="Image" class="img-fluid"></span><span>Subscribe to Newsletter</span></h3>
+
+							<form action="#" class="row g-3">
+								<div class="col-auto">
+									<input type="text" class="form-control" placeholder="Enter your name">
+								</div>
+								<div class="col-auto">
+									<input type="email" class="form-control" placeholder="Enter your email">
+								</div>
+								<div class="col-auto">
+									<button class="btn btn-primary">
+										<span class="fa fa-paper-plane"></span>
+									</button>
+								</div>
+							</form>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="row g-5 mb-5">
+					<div class="col-lg-4">
+						<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">KICK'S BRAND<span>.</span></a></div>
+						<p class="mb-4">Experience the perfect fusion of style, comfort, and durability with the Kick’s Brand premium shoe. Designed with high-quality materials and precision craftsmanship, this shoe offers superior cushioning, excellent grip, and long-lasting wear. Whether you’re hitting the streets, heading to the gym, or enjoying a casual day out, it’s built to keep you moving in comfort while elevating your style.</p>
+
+						<ul class="list-unstyled custom-social">
+							<li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
+							<li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
+							<li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
+							<li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
+						</ul>
+					</div>
+
+					<div class="col-lg-8">
+						<div class="row links-wrap">
+							<div class="col-6 col-sm-6 col-md-3">
+								<ul class="list-unstyled">
+									<li><a href="#">About us</a></li>
+									<li><a href="#">Services</a></li>
+									<li>Blog</li>
+									<li><a href="#">Contact us</a></li>
+								</ul>
+							</div>
+
+							<div class="col-6 col-sm-6 col-md-3">
+								<ul class="list-unstyled">
+									<li>Support</li>
+									<li>Knowledge base</li>
+									<li>Live chat</li>
+								</ul>
+							</div>
+
+							<div class="col-6 col-sm-6 col-md-3">
+								<ul class="list-unstyled">
+									<li>Jobs</li>
+									<li>Our team</li>
+									<li>Leadership</li>
+									<li>Privacy Policy</li>
+								</ul>
+							</div>
+<!-- 
+							<div class="col-6 col-sm-6 col-md-3">
+								<ul class="list-unstyled">
+									<li><a href="#">Nordic Chair</a></li>
+									<li><a href="#">Kruzo Aero</a></li>
+									<li><a href="#">Ergonomic Chair</a></li>
+								</ul>
+							</div> -->
+						</div>
+					</div>
+
+				</div>
+
+				<div class="border-top copyright">
+					<div class="row pt-4">
+						<div class="col-lg-6">
+							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> Distributed By <a hreff="https://themewagon.com">ThemeWagon</a>  <!-- License information: https://untree.co/license/ -->
+            </p>
+						</div>
+
+						<div class="col-lg-6 text-center text-lg-end">
+							<ul class="list-unstyled d-inline-flex ms-auto">
+								<li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</footer>
+		<!-- End Footer Section -->	
+
+
+		<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+		<script src="{% static 'js/tiny-slider.js' %}"></script>
+		<script src="{% static 'js/custom.js' %}"></script>
+	
+
+
+    <!-- Bootstrap JS -->
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  </body>
+</html>
