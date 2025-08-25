@@ -1,6 +1,6 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect,get_object_or_404
 from django.http import HttpResponse
-from .models import UserProfile
+from .models import UserProfile,Product
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 
@@ -37,8 +37,8 @@ def checkout(request):
 def cart(request):
     return render (request,"cart.html")
 
-def singleproduct(request):
-    return render (request,"singleproduct.html")
+# def singleproduct(request):
+#     return render (request,"singleproduct.html")
 
 def thankyou(request):
     return render (request,"thankyou.html")
@@ -115,3 +115,23 @@ def user_login(request):
 
 def home(request):
     return render(request, 'index.html')
+
+
+
+def  single1(request):
+    return render (request,"single1.html")
+
+
+
+def shop(request):
+    products = Product.objects.all()
+    return render(request, 'shop.html',{'products':products})
+
+
+def singleproduct(request, id):
+    product = get_object_or_404(Product, id=id)
+    return render(request, 'singleproduct.html', {'product': product})
+
+
+
+

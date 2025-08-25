@@ -12,8 +12,9 @@ urlpatterns=[
     path('contactus/',views.contactus,name="contactus"),
     path('checkout/',views.checkout,name="checkout"),
     path('cart/',views.cart,name="cart"),
-    path('singleproduct/',views.singleproduct,name="singleproduct"),
+    path('singleproduct/<int:id>/',views.singleproduct,name="singleproduct"),
     path('thankyou/',views.thankyou,name="thankyou"),
-    path('about/',views.about,name="about")
+    path('about/',views.about,name="about"),
+    path('single1/',views.single1,name="single1"),
 
 ]

@@ -3,6 +3,6 @@ from .models import user
 admin.site.register(user)
 
 
-from .models import user,product
-admin.site.register(product)
+from .models import user,Product
+admin.site.register(Product)
 # Register your models here.
